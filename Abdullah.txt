@@ -1,0 +1,31 @@
+(function(){
+  const LICENSE_KEY = "820851251";
+  const COUNTRY_CODES = {
+    "🇧🇩 Bangladesh": "bd",
+    "🇮🇳 India": "in",
+    "🇵🇰 Pakistan": "pk",
+    "🇳🇵 Nepal": "np"
+  };
+
+  const style = document.createElement("style");
+  style.innerHTML = `
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: scale(.95)}
+      100% {opacity: 1; transform: scale(1)}
+    }
+    #fancy-modal * { box-sizing: border-box }
+    #fancy-modal {
+      font-family: 'Segoe UI', sans-serif;
+      position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,.95);
+      border-radius: 16px; padding: 25px;
+      width: 340px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      z-index: 99999;
+      animation: fadeIn .3s ease-out;
+      backdrop-filter: blur(8px);
+      border: 1px solid #e0ffe0;
+    }
+    #fancy-modal .header { text-align: center; margin-bottom: 16px }
+    #fancy-modal .header h3 { margin: 0 0 10px; font-size: 16
